@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("//cdn.web-fonts.ge/fonts/bpg-arial/css/bpg-arial.min.css");
+
+$btn-main-main: #eee;
+$btn-main-dark: #ddd;
+$btn-main-text: #444;
+$btn-main-outline: #dddddd60;
+
+$btn-dark-main: #32383f;
+$btn-dark-dark: #272b31;
+$btn-dark-text: #fff;
+$btn-dark-outline: #32383f60;
+
+$btn-primary-main: #6666EA;
+$btn-primary-dark: #5b5bd2;
+$btn-primary-text: #fff;
+$btn-primary-outline: #6666EA60;
+
+$btn-success-main: #66eaa8;
+$btn-success-dark: #5bd297;
+$btn-success-text: #1e4632;
+$btn-success-outline: #66eaa860;
+
+$btn-warning-main: #eaa866;
+$btn-warning-dark: #d2975b;
+$btn-warning-text: white;
+$btn-warning-outline: #eaa86660;
+
+$btn-danger-main: #ea6666;
+$btn-danger-dark: #d25b5b;
+$btn-danger-text: white;
+$btn-danger-outline: #ea666660;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'BPG Arial', sans-serif;
+    transition: .2s;
+    scroll-behavior: smooth;
+}
+
+// Navbar
+.nav{
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    height: 10vh;
+    align-items: center;
+    background-color: $btn-main-main;
+
+    .logo{
+        color: $btn-primary-main;
+    }
+
+    .logo:hover{
+        opacity: 0.7;
+    }
+
+    a{
+        text-decoration: none;
+        color: $btn-main-text;
+        display: block;
+    }
+
+    .nav-overlay{
+        background-color: $btn-dark-outline;
+        position: absolute;
+        width: 100vw;
+        height: 90vh;
+        bottom: 0;
+        display: none;
+    }
+
+    .nav-links{
+        list-style: none;
+        display: flex;
+        align-items: center;
+
+        li{
+            width: 80px;
+            text-align: center;
+        }
+
+        li:hover{
+            a{
+                color: $btn-primary-main;
+            }
+        }
+    }
+
+    .nav-burger{
+        display: none;
+        width: 30px;
+        height: 40px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+
+        div{
+            height: 3px;
+            width: 100%;
+            background-color: $btn-primary-main;
+            margin: 6px;
+        }
+    }
+
+    .nav-burger-active{
+        .l2{
+            opacity: 0;
+        }
+
+        .l1{
+            transform: rotateZ(45deg) translate(4px, 8px);
+        }
+
+        .l3{
+            transform: rotateZ(-45deg) translate(4px, -9px);
+        }
+    }
+}
+
+.nav-dark{
+    background-color: $btn-dark-dark;
+
+    .logo{
+        color: $btn-dark-text;
+    }
+
+    a{
+        color: $btn-dark-text;
+    }
+}
+
+.overflow-hidden{
+    overflow: hidden;
+}
+
+// Buttons
+
+.btn{
+    margin: 10px;
+    width: 120px;
+    height: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    border: 2px $btn-main-main solid;
+    background-color: $btn-main-main;
+    border-radius: 5px;
+    color: $btn-main-text;
+    cursor: pointer;
+    outline: 0px $btn-main-outline solid;
+}
+
+.btn:hover{
+    color: $btn-main-text;
+    background-color: $btn-main-dark;
+    border-color: $btn-main-dark;
+}
+
+.btn-outline{
+    background-color: transparent;
+    color: $btn-main-dark;
+    border-color: $btn-main-dark;
+}
+
+.btn-outline:hover{
+    background-color: $btn-main-main;
+    color: $btn-main-text;
+    border-color: $btn-main-main;
+}
+
+.btn:focus{
+    outline-width: 4px;
+}
+
+.btn-s{
+    width: 100px;
+    height: 40px;
+    font-size: 14px;
+    padding: 5px !important;
+}
+
+.btn-l{
+    width: 140px;
+    height: 60px;
+    font-size: 16px;
+}
+
+.btn-sqr{
+    width: 40px;
+    height: 40px;
+}
+
+.btn-auto{
+    width: auto;
+    padding: 10px;
+}
+
+.btn-dark{
+    background-color: $btn-dark-main;
+    color: $btn-dark-text;
+    border-color: $btn-dark-main;
+    outline-color: $btn-dark-outline;
+}
+
+.btn-dark:hover{
+    color: $btn-dark-text;
+    background-color: $btn-dark-dark;
+    border-color: $btn-dark-dark;
+}
+
+.btn-dark-outline{
+    background-color: transparent;
+    color: $btn-dark-dark;
+    border-color: $btn-dark-dark;
+    outline-color: $btn-dark-outline;
+}
+
+.btn-dark-outline:hover{
+    background-color: $btn-dark-main;
+    color: $btn-dark-text;
+    border-color: $btn-dark-main;
+}
+
+.btn-primary{
+    background-color: $btn-primary-main;
+    color: $btn-primary-text;
+    border-color: $btn-primary-main;
+    outline-color: $btn-primary-outline;
+}
+
+.btn-primary:hover{
+    color: $btn-primary-text;
+    background: $btn-primary-dark;
+    border-color: $btn-primary-dark;
+}
+
+.btn-primary-outline{
+    background-color: transparent;
+    color: $btn-primary-dark;
+    border-color: $btn-primary-dark;
+    outline-color: $btn-primary-outline;
+}
+
+.btn-primary-outline:hover{
+    background-color: $btn-primary-main;
+    color: $btn-primary-text;
+    border-color: $btn-primary-main;
+}
+
+.btn-success{
+    background-color: $btn-success-main;
+    color: $btn-success-text;
+    border-color: $btn-success-main;
+    outline-color: $btn-success-outline;
+}
+
+.btn-success:hover{
+    color: $btn-success-text;
+    background-color: $btn-success-dark;
+    border-color: $btn-success-dark;
+}
+
+.btn-success-outline{
+    background-color: transparent;
+    color: $btn-success-dark;
+    border-color: $btn-success-dark;
+    outline-color: $btn-success-outline;
+}
+
+.btn-success-outline:hover{
+    background-color: $btn-success-main;
+    color: $btn-success-text;
+    border-color: $btn-success-main;
+}
+
+.btn-warning{
+    background-color: $btn-warning-main;
+    color: $btn-warning-text;
+    border-color: $btn-warning-main;
+    outline-color: $btn-warning-outline;
+}
+
+.btn-warning:hover{
+    color: $btn-warning-text;
+    background-color: $btn-warning-dark;
+    border-color: $btn-warning-dark;
+}
+
+.btn-warning-outline{
+    background-color: transparent;
+    color: $btn-warning-dark;
+    border-color: $btn-warning-dark;
+    outline-color: $btn-warning-outline;
+}
+
+.btn-warning-outline:hover{
+    background-color: $btn-warning-main;
+    color: $btn-warning-text;
+    border-color: $btn-warning-main;
+}
+
+.btn-danger{
+    background-color: $btn-danger-main;
+    color: $btn-danger-text;
+    border-color: $btn-danger-main;
+    outline-color: $btn-danger-outline;
+}
+
+.btn-danger:hover{
+    color: $btn-danger-text;
+    background-color: $btn-danger-dark;
+    border-color: $btn-danger-dark;
+}
+
+.btn-danger-outline{
+    background-color: transparent;
+    color: $btn-danger-dark;
+    border-color: $btn-danger-dark;
+    outline-color: $btn-danger-outline;
+}
+
+.btn-danger-outline:hover{
+    background-color: $btn-danger-main;
+    color: $btn-danger-text;
+    border-color: $btn-danger-main;
+}
+
+// Inputs
+
+.inp{
+    margin: 10px;
+    background-color: $btn-main-main;
+    color: $btn-dark-dark;
+    border: 2px $btn-main-dark solid;
+    padding: 5px;
+    width: 260px;
+    height: 50px;
+    font-size: 16px;
+    border-radius: 5px;
+    outline: 0px $btn-main-outline solid;
+}
+
+.inp:focus{
+    outline-width: 4px;
+}
+
+.inp-s{
+    width: 240px;
+    height: 40px;
+}
+
+.inp-l{
+    width: 300px;
+    height: 60px;
+}
+
+.inp-dark{
+    background-color: $btn-dark-main;
+    border-color: $btn-dark-dark;
+    color: $btn-dark-text;
+    outline-color: $btn-dark-outline;
+}
+
+@media screen and (max-width: 900px) {
+    .nav{
+        .nav-links{
+            position: absolute;
+            width: 50vw;
+            height: 90vh;
+            bottom: 0;
+            left: 0;
+            background-color: $btn-main-main;
+            flex-direction: column;
+            transform: translateX(-50vw);
+
+            li{
+                margin-top: 40px;
+            }
+        }
+
+        .nav-overlay-active{
+            display: block;
+        }
+
+        .nav-links-active{
+            transform: translateX(0);
+        }
+
+        .nav-burger{
+            display: block;
+        }
+    }
+
+    .nav-dark{
+        .nav-links{
+            background-color: $btn-dark-dark;
+        }
+    }
+}
