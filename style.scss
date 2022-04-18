@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url("//cdn.web-fonts.ge/fonts/bpg-arial/css/bpg-arial.min.css");
 
-$btn-main-main: #eee;
-$btn-main-dark: #ddd;
-$btn-main-text: #444;
-$btn-main-outline: #dddddd80;
+$btn-light-main: #eee;
+$btn-light-dark: #ddd;
+$btn-light-text: #444;
+$btn-light-outline: #dddddd80;
 
 $btn-dark-main: #32383f;
 $btn-dark-dark: #272b31;
@@ -31,12 +31,17 @@ $btn-danger-dark: #d25b5b;
 $btn-danger-text: white;
 $btn-danger-outline: #ea666680;
 
+$btn-info-main: #66a8ea;
+$btn-info-dark: #5b97d2;
+$btn-info-text: white;
+$btn-info-outline: #66a8ea80;
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', 'BPG Arial', sans-serif;
-    transition: .2s;
+    transition: .2s ease-in-out;
     scroll-behavior: smooth;
 }
 
@@ -47,7 +52,7 @@ $btn-danger-outline: #ea666680;
     margin: auto;
     height: 10vh;
     align-items: center;
-    background-color: $btn-main-main;
+    background-color: $btn-light-main;
 
     .logo{
         color: $btn-primary-main;
@@ -59,17 +64,8 @@ $btn-danger-outline: #ea666680;
 
     a{
         text-decoration: none;
-        color: $btn-main-text;
+        color: $btn-light-text;
         display: block;
-    }
-
-    .nav-overlay{
-        background-color: $btn-dark-outline;
-        position: absolute;
-        width: 100vw;
-        height: 90vh;
-        bottom: 0;
-        display: none;
     }
 
     .nav-links{
@@ -84,7 +80,7 @@ $btn-danger-outline: #ea666680;
 
         li:hover{
             a{
-                color: $btn-primary-main;
+                opacity: 0.8;
             }
         }
     }
@@ -132,6 +128,18 @@ $btn-danger-outline: #ea666680;
     }
 }
 
+.nav-info{
+    background-color: $btn-info-main;
+
+    .logo{
+        color: $btn-info-text;
+    }
+
+    a{
+        color: $btn-info-text;
+    }
+}
+
 .overflow-hidden{
     overflow: hidden;
 }
@@ -144,30 +152,36 @@ $btn-danger-outline: #ea666680;
     height: 50px;
     font-size: 15px;
     font-weight: bold;
-    border: 2px $btn-main-main solid;
-    background-color: $btn-main-main;
+    border: 2px $btn-light-main solid;
+    background-color: $btn-light-main;
     border-radius: 5px;
-    color: $btn-main-text;
+    color: $btn-light-text;
     cursor: pointer;
-    outline: 0px $btn-main-outline solid;
+    outline: 0px $btn-light-outline solid;
 }
 
 .btn:hover{
-    color: $btn-main-text;
-    background-color: $btn-main-dark;
-    border-color: $btn-main-dark;
+    color: $btn-light-text;
+    background-color: $btn-light-dark;
+    border-color: $btn-light-dark;
+}
+
+.btn-sqr{
+    width: 50px !important;
+    height: 5px !important;
+    font-size: 15px;
 }
 
 .btn-outline{
     background-color: transparent;
-    color: $btn-main-dark;
-    border-color: $btn-main-dark;
+    color: $btn-light-text;
+    border-color: $btn-light-dark;
 }
 
 .btn-outline:hover{
-    background-color: $btn-main-main;
-    color: $btn-main-text;
-    border-color: $btn-main-main;
+    background-color: $btn-light-main;
+    color: $btn-light-text;
+    border-color: $btn-light-main;
 }
 
 .btn:focus{
@@ -181,15 +195,23 @@ $btn-danger-outline: #ea666680;
     padding: 5px !important;
 }
 
+.btn-s-sqr{
+    width: 40px !important;
+    height: 40px !important;
+    font-size: 14px;
+    padding: 5px !important;
+}
+
 .btn-l{
     width: 140px;
     height: 60px;
     font-size: 16px;
 }
 
-.btn-sqr{
-    width: 40px;
-    height: 40px;
+.btn-l-sqr{
+    width: 60px !important;
+    height: 60px !important;
+    font-size: 16px;
 }
 
 .btn-auto{
@@ -327,19 +349,45 @@ $btn-danger-outline: #ea666680;
     border-color: $btn-danger-main;
 }
 
+.btn-info{
+    background-color: $btn-info-main;
+    color: $btn-info-text;
+    border-color: $btn-info-main;
+    outline-color: $btn-info-outline;
+}
+
+.btn-info:hover{
+    color: $btn-info-text;
+    background-color: $btn-info-dark;
+    border-color: $btn-info-dark;
+}
+
+.btn-info-outline{
+    background-color: transparent;
+    color: $btn-info-dark;
+    border-color: $btn-info-dark;
+    outline-color: $btn-info-outline;
+}
+
+.btn-info-outline:hover{
+    background-color: $btn-info-main;
+    color: $btn-info-text;
+    border-color: $btn-info-main;
+}
+
 // Inputs
 
 .inp{
     margin: 10px;
-    background-color: $btn-main-main;
+    background-color: $btn-light-main;
     color: $btn-dark-dark;
-    border: 2px $btn-main-dark solid;
+    border: 2px $btn-light-dark solid;
     padding: 5px;
     width: 260px;
     height: 50px;
     font-size: 16px;
     border-radius: 5px;
-    outline: 0px $btn-main-outline solid;
+    outline: 0px $btn-light-outline solid;
 }
 
 .inp:focus{
@@ -358,30 +406,47 @@ $btn-danger-outline: #ea666680;
 
 .inp-dark{
     background-color: $btn-dark-main;
-    border-color: $btn-dark-dark;
+    border-color: $btn-dark-main;
     color: $btn-dark-text;
     outline-color: $btn-dark-outline;
+}
+
+// Forms
+
+.form-search{
+    display: flex;
+
+    input{
+        height: 35px !important;
+        width: 140px !important;
+        font-size: 12px !important;
+        margin-right: 0 !important;
+        border-radius: 5px 0px 0px 5px !important;
+    }
+
+    button{
+        width: 35px !important;
+        height: 35px !important;
+        margin-left: 0;
+        border-radius: 0px 5px 5px 0px;
+    }
 }
 
 @media screen and (max-width: 900px) {
     .nav{
         .nav-links{
             position: absolute;
-            width: 50vw;
+            width: 100vw;
             height: 90vh;
             bottom: 0;
             left: 0;
-            background-color: $btn-main-main;
+            background-color: $btn-light-main;
             flex-direction: column;
-            transform: translateX(-50vw);
+            transform: translateX(-100vw);
 
             li{
                 margin-top: 40px;
             }
-        }
-
-        .nav-overlay-active{
-            display: block;
         }
 
         .nav-links-active{

@@ -5,13 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Library</title>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="nav nav-dark">
         <a href="#" class="logo">logo</a>
-        <div class="nav-overlay"></div>
         <div class="nav-links">
+            <li style="width: auto !important;">
+                <form class="form-search">
+                    <input class="inp inp-dark" type="text">
+                    <button class="btn btn-info"><i class='bx bx-search'></i></button>
+                </form>
+            </li>
             <li><a href="#buttons">Buttons</a></li>
             <li><a href="#inputs">Inputs</a></li>
             <li><a href="#">item</a></li>
@@ -72,6 +78,14 @@
             <button class="btn btn-danger-outline btn-l">Button</button>
             <button class="btn btn-danger-outline">Button</button>
             <button class="btn btn-danger-outline btn-s">Button</button>
+        </div>
+        <div class="button-group">
+            <button class="btn btn-info btn-s">Button</button>
+            <button class="btn btn-info">Button</button>
+            <button class="btn btn-info btn-l">Button</button>
+            <button class="btn btn-info-outline btn-l">Button</button>
+            <button class="btn btn-info-outline">Button</button>
+            <button class="btn btn-info-outline btn-s">Button</button>
         </div>
     </div>
     <br><hr><h1>Inputs</h1><br>
